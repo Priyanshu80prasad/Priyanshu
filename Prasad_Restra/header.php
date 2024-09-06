@@ -60,7 +60,11 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="view_reservations.php" >View Reservations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.php" >Menu</a>
                     </li>';
+                    
                     
                     //set navigation bar when logged in and role of admin
                     if($_SESSION['role']==2) {   
@@ -90,9 +94,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#footer">Find Us</a>
                     </li>
-                        
-                    '; } 
-                    ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.php">Menu</a>
+                    </li>'; } ?>
                     
                 </ul>
                 
@@ -132,8 +136,8 @@
               <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             
-            <div class="header-right">
-                <a href="admin_login.php" class="btn">Admin</a>
+            <div class="modal-header">
+                <a href="admin_login.php" class="close">Admin </a>
                 </div>
             
 

@@ -98,7 +98,8 @@ if(isset($_SESSION['user_id'])){
                       <td>".$row["telephone"]."</td>
                       <td>".$row["reg_date"]."</td>
                       <td><textarea readonly>".$row["comment"]."</textarea></td>
-                      <td class='table-danger'><button type='submit' name='delete-submit' class='btn btn-danger btn-sm'>Cancel</button></td>
+                      <td class='table-danger'><button type='submit' name='delete-submit'
+                       class='btn btn-danger btn-sm'>Cancel</button></td>
                           </form>
                     </tr>
               </tbody>";

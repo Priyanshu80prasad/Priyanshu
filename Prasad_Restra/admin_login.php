@@ -41,6 +41,8 @@ if (isset($_POST['login'])) {
         body {
             font-family: Arial, sans-serif;
             background-color: black;
+          
+             background-image: url("img/1.jpg"), url("paper.gif"); 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -52,20 +54,22 @@ if (isset($_POST['login'])) {
 
         form {
             background: red;
-            padding: 180px;
+            padding: 60px;
             border-radius: 58px;
             box-shadow: 10 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
             max-width: 100%;
-            background-image: url("img/6.jpeg");
+            background-color: black;
+
+            /* background-image: url("img/6.jpeg"); */
         }
 
         input[type="text"], input[type="password"] {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 14px;
+            border: 1px solid blue;
+            border-radius: 24px;
         }
 
         button {
@@ -90,7 +94,7 @@ if (isset($_POST['login'])) {
         }
         p{
             font-size:30px;
-            color:white;
+            color:yellow;
             text-align:center;
         }
     </style>
@@ -98,7 +102,7 @@ if (isset($_POST['login'])) {
 <body>
    
     <form method="post" action="admin_login.php">
-        <p>Admin Login Page</p>
+        <p>Admin Login</p>
         <input type="text" name="username" placeholder="Username" required>
         <input type="password" name="password" placeholder="Password" required>
         <button type="submit" name="login">Login</button>

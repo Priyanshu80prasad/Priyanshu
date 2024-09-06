@@ -28,15 +28,14 @@ SET time_zone = "+00:00";
 -- Table structure for table `reservation`
 --
 
-DROP TABLE IF EXISTS `reservation`;
 CREATE TABLE IF NOT EXISTS `reservation` (
   `reserv_id` int(100) NOT NULL AUTO_INCREMENT,
   `f_name` text NOT NULL,
   `l_name` text NOT NULL,
   `num_guests` int(11) NOT NULL,
   `num_tables` int(11) NOT NULL,
-  `rdate` date NOT NULL,
-  `time_zone` text NOT NULL,
+  `rdate` date NOT NULL, -- Corrected by removing (3)
+  `time_zone` varchar(10) NOT NULL, -- Corrected to varchar(10) instead of text(3)
   `telephone` text NOT NULL,
   `comment` mediumtext NOT NULL,
   `reg_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -45,19 +44,14 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   KEY `users_fk` (`user_fk`)
 ) ENGINE=InnoDB AUTO_INCREMENT=77 DEFAULT CHARSET=utf8;
 
+
 --
 -- Dumping data for table `reservation`
 --
 
 INSERT INTO `reservation` (`reserv_id`, `f_name`, `l_name`, `num_guests`, `num_tables`, `rdate`, `time_zone`, `telephone`, `comment`, `reg_date`, `user_fk`) VALUES
 (62, 'Bill', 'Fotos', 10, 4, '2019-05-30', '12:00 - 16:00', '21096321232', 'fsdfsd', '2019-05-04 23:38:47', 28),
-(64, 'Bill', 'Foto', 6, 2, '2019-05-20', '12:00 - 16:00', '1321312', 'fdsfsd', '2019-05-04 23:43:58', 28),
-(71, 'Bill', 'Fotos', 10, 4, '2019-05-14', '12:00 - 16:00', '2129632123', 'fsfsd', '2019-05-05 00:51:50', 28),
-(72, 'Bill', 'Foto', 10, 4, '2019-05-15', '16:00 - 20:00', '2109632123', 'fsfsfsd', '2019-05-05 00:52:09', 28),
-(73, 'Bill', 'dsadsadas', 30, 14, '2019-05-22', '12:00 - 16:00', '2109632123', 'dsadsadas', '2019-05-05 00:52:39', 28),
-(74, 'Bill', 'Fotos', 6, 2, '2019-05-10', '12:00 - 16:00', '2129632123', '312312312', '2019-05-05 00:54:08', 28),
-(75, 'Bill', 'Fotos', 6, 2, '2019-05-10', '16:00 - 20:00', '2109632123', '', '2019-05-05 00:54:40', 28),
-(76, 'Bill', 'Fotos', 1, 1, '2019-05-24', '12:00 - 16:00', '2109632123', 'sfsdfsd', '2019-05-06 23:28:11', 28);
+
 
 -- --------------------------------------------------------
 
@@ -187,6 +181,30 @@ CREATE TABLE IF NOT EXISTS admins (
     password VARCHAR(255) NOT NULL
 );
 INSERT INTO admins (username, password) VALUES ('admin', 'admin123');
+
+
+
+CREATE TABLE food (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    image VARCHAR(255) NOT NULL
+);
+DROP TABLE IF EXISTS `food`;
+CREATE TABLE IF NOT EXISTS `food` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(255) NOT NULL,
+  `price` DECIMAL(10, 2) NOT NULL,
+  `image` VARCHAR(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Example data for table `food`
+INSERT INTO `food` (`name`, `price`, `image`) VALUES
+('Pizza', 8.99, 'pizza.jpg'),
+('Burger', 5.49, 'burger.jpg'),
+('Pasta', 7.99, 'pasta.jpg');
+
+
 
 
 

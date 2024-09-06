@@ -83,17 +83,23 @@ require 'dbh.inc.php';
     
     else {
     
-         $sql = "INSERT INTO reservation(f_name, l_name, num_guests, num_tables, rdate, time_zone, telephone, comment, user_fk) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+         $sql = "INSERT INTO reservation(f_name, l_name, num_guests, num_tables, rdate, time_zone, telephone, 
+         comment, user_fk) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = mysqli_stmt_init($conn);
                  if(!mysqli_stmt_prepare($stmt, $sql)){
                     header("Location: ../reservation.php?error3=sqlerror1");
-                    exit();
-                }
+                    exit();}
                 else {       
-                    mysqli_stmt_bind_param($stmt, "sssssssss", $fname, $lname, $guests, $tables, $date, $time, $tele, $comments, $user);
+                    mysqli_stmt_bind_param($stmt, "sssssssss", $fname, $lname, $guests, $tables, $date, 
+                    $time, $tele, $comments, $user);
                     mysqli_stmt_execute($stmt);
                     header("Location: ../reservation.php?reservation=success");
                     exit();
+
+
+        if ( $user){
+
+        }
                 }
         }
     }

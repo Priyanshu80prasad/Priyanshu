@@ -104,6 +104,8 @@ feels like home. Whether you're in the mood for a comforting classic or an adven
 </div><br><br>
 <!----end of gallery -->
 
+
+
 <div class="container" id="reservation">
     <h3 class="text-center"><br><br>Reservation<br><br></h3>
     <img  src="img/16.jpg" class="img-fluid rounded">
@@ -124,7 +126,7 @@ feels like home. Whether you're in the mood for a comforting classic or an adven
             <div class="col">
            
                        
-                <div class="signup-form">
+                
                     <form action="#footer" method="post">
                     <div class="form-group">
                             

@@ -104,7 +104,6 @@ if(isset($_SESSION['user_id'])){
             </div>
 
             
-    </div>
 
             <div class="form-group">
             <label for="guests">Enter your Number</label>

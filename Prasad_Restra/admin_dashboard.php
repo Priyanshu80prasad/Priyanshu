@@ -22,85 +22,107 @@ if (!$result) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <li class="nav-item">
-	                 <a class="nav-link" href="index.php">Home</a>
-	             </li>
     <style>
-        /* CSS for styling the table and buttons */
-        /* Basic reset */
-* {
-    margin: 10;
-    padding: 10;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-nav-item{
-   
-}
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
+        body {
+            padding: 20px;
+            background-color: gray;
+            color: black;
+        }
 
-body {
-    padding: 20px;
-    background-color: gray;
-    color: black;
-}
+        /* Header Styling */
+        h2 {
+            margin-bottom: 20px;
+            color: red;
+            text-align: center;
+            background-color: black;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 1px rgb(235, 203, 20);
+        }
 
-/* Header styling */
-h2,h3 {
-    margin-bottom: 20px;
-    color: red;
-    text-align:center;
-    background-color:black;
-    font-size: 2.rem;
-    margin-bottom: 30px;
-    text-shadow: 2px 1px rgb(235, 203, 20);
-    
+        nav {
+            margin-bottom: 20px;
+        }
 
-    }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-/* Table styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
 
-th, td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid black;
-}
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            background-color: blue;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
 
-th {
-    background-color: blue;
-    color: white;
-}
+        nav ul li a:hover {
+            background-color: darkblue;
+        }
 
-tr:nth-child(even) {
-    background-color: yellow;
-}
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
 
-tr:hover {
-    background-color: pink;
-}
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid black;
+        }
 
-button {
-    padding: 5px 10px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
+        th {
+            background-color: blue;
+            color: white;
+        }
 
-button:hover {
-    background-color: blue;
-}
+        tr:nth-child(even) {
+            background-color: yellow;
+        }
+
+        tr:hover {
+            background-color: pink;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: blue;
+        }
 
     </style>
 </head>
 <body>
     <h2> <marquee> Admin Dashboard</marquee> </h2>
-    
+
+    <nav>
+        <ul>
+            <!-- <li><a href="index.php">Home</a></li> -->
+            <li><a href="manage item.php">Manage Items</a></li> <!-- Fixed the link -->
+        </ul>
+    </nav>
 
     <table>
         <tr>
